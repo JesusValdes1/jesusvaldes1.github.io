@@ -1,12 +1,12 @@
 .home-section {
     display: flex;
     align-items: center;
-    padding: 100px 0 50px;
+    padding: 100px 0 20px;
 }
 
 @media(min-width:1200px) {
     .home-section {
-        padding: 90px 0 40px;
+        /*padding: 90px 0 40px;*/
     }
 }
 
