@@ -1,0 +1,145 @@
+.portfolio-navbar {
+    background: rgba(255, 255, 255, .90);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    transition: .35s;
+    padding: 14px 0;
+    z-index: 9999;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    position: relative;
+    color: #374151;
+    font-weight: 600;
+    padding: .75rem 1rem !important;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: .3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: calc(100% - 2rem);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    background: #f8fafc;
+    padding: 9px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #334155;
+    transition: .3s;
+}
+
+.language-btn img {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.language-btn:hover {
+    background: #e2e8f0;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    font-size: 1.4rem;
+    color: #111827;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media(max-width:1199px) {
+    .portfolio-navbar {
+        padding: 12px 0;
+    }
+    .navbar-collapse {
+        margin-top: 18px;
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, .10);
+    }
+    .navbar-nav {
+        gap: 5px;
+    }
+    .nav-link {
+        text-align: center;
+        padding: 15px !important;
+    }
+    .nav-link::after {
+        display: none;
+    }
+    .navbar-actions {
+        margin-top: 25px;
+        border-top: 1px solid #ececec;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .language-btn {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .brand-name {
+        display: none;
+    }
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+}

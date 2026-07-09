@@ -1,29 +1,17 @@
-anime({
-    targets:'#titulo',
-    translateY:[
-        -80,
-        0
-    ],
-    opacity:[
-        0,
-        1
-    ],
-    duration:1800,
-    easing:'easeOutExpo'
+document.addEventListener("DOMContentLoaded", async () => {
 
-});
+    await loadSections();
 
-anime({
-    targets:'.tech-stack span',
-    translateY:[
-        40,
-        0
-    ],
-    opacity:[
-        0,
-        1
-    ],
-    delay:
-    anime.stagger(150),
-    duration:1000
+    initNavbar();
+    initHome();
+    initAbout();
+    initExperience();
+    initSkills();
+    initProjects();
+    initContact();
+    initFooter();
+    initAnimations();
+
+    console.log("Portafolio iniciado.");
+
 });
