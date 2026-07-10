@@ -38,6 +38,33 @@
     margin-bottom: 15px;
 }
 
+.home-quote {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: rgba(37, 99, 235, .06);
+    border: 1px solid rgba(37, 99, 235, .12);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.home-quote i {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.home-quote:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    background: rgba(37, 99, 235, .08);
+}
+
 .home-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +193,11 @@
     .home-description {
         max-width: none;
     }
+    .home-quote {
+        justify-content: center;
+        margin-inline: auto;
+        text-align: center;
+    }
     .home-buttons,
     .technology-list {
         justify-content: center;
@@ -184,6 +216,10 @@
     }
     .home-subtitle {
         font-size: 1.3rem;
+    }
+    .home-quote {
+        padding: 8px 14px;
+        font-size: .95rem;
     }
     .home-buttons {
         flex-direction: column;
