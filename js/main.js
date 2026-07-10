@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await loadSections();
 
+    initAnimations();
     initNavbar();
     initHome();
     initAbout();
@@ -9,8 +10,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     initSkills();
     initProjects();
     initContact();
-    initFooter();
-    initAnimations();
 
     console.log("Portafolio iniciado.");
 

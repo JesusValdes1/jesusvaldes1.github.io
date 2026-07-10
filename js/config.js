@@ -11,7 +11,6 @@ const APP = {
         "experience",
         "skills",
         "projects",
-        "contact",
-        "footer"
+        "contact"
     ]
 };
