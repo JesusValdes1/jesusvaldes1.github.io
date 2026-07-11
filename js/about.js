@@ -1,5 +1,5 @@
 function initAbout() {
 
-    console.log("About cargado");
+    //console.log("About cargado");
 
 }
