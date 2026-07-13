@@ -39,14 +39,9 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
     background: var(--bg-body);
     color: var(--text-primary);
-}
-
-main {
-    overflow-x: hidden;
 }
