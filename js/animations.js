@@ -76,3 +76,31 @@ function staggerUp(target){
         easing:"easeOutExpo"
     });
 }
+
+function observeElement(selector, enter, leave = null) {
+
+    const elements = document.querySelectorAll(selector);
+    const observer = new IntersectionObserver((entries) => {
+        
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                enter(entry.target);
+            } else if (leave) {
+                leave(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    elements.forEach(element => observer.observe(element));
+}
+
+function hide(target){
+    anime.animate(target,{
+        opacity: 0,
+        translateY: 40,
+        duration: 400,
+        easing: "easeOutQuad"
+    });
+}
