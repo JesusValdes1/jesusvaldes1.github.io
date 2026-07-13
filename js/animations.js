@@ -50,7 +50,7 @@ function fadeLeft(target, delay = 0){
 function fadeRight(target, delay = 0){
     anime.animate(target,{
         opacity:[0,1],
-        translateX:[50,0],
+        translateX:[20,0],
         duration:900,
         delay,
         easing:"easeOutExpo"
@@ -90,7 +90,8 @@ function observeElement(selector, enter, leave = null) {
             }
         });
     }, {
-        threshold: 0.25
+        rootMargin: "0px 0px -120px 0px",
+        threshold: 0
     });
 
     elements.forEach(element => observer.observe(element));
