@@ -23,32 +23,30 @@ function initNavbar() {
         link.addEventListener("click", function (e) {
 
             e.preventDefault();
-
             const target = document.getElementById(this.dataset.target);
 
             if (!target) return;
-
-            const navbarHeight = navbar.offsetHeight;
-
-            // Solo actualizar el active si es un elemento del menú
-            if (this.classList.contains("nav-link")) {
-                scrollLinks.forEach(l => l.classList.remove("active"));
-                this.classList.add("active");
-            }
-
-            window.scrollTo({
-                top: target.offsetTop - navbarHeight - 20,
-                behavior: "smooth"
-            });
-
             const collapse = document.querySelector("#navbarMenu");
 
+            const goToSection = () => {
+                const navbarHeight = navbar.clientHeight
+                window.scrollTo({
+                    top: target.offsetTop - navbarHeight - 20,
+                    behavior: "smooth"
+                });
+            };
+
             if (collapse && collapse.classList.contains("show")) {
-                bootstrap.Collapse.getOrCreateInstance(collapse).hide();
+                bootstrap.Collapse
+                    .getOrCreateInstance(collapse)
+                    .hide();
+                collapse.addEventListener("hidden.bs.collapse", goToSection, {
+                    once: true
+                });
+            } else {
+                goToSection();
             }
-
         });
-
     });
 
     // Detectar sección visible

@@ -1,7 +1,6 @@
 .portfolio-navbar {
-    background: var(--navbar-bg);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--navbar-border);
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
     transition: .35s;
     padding: 14px 0;
     z-index: 9999;
