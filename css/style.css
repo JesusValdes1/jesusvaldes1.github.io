@@ -51,6 +51,10 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    overflow: hidden;
+}
+
 .animate {
     opacity: 0;
 }
