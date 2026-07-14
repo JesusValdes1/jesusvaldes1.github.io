@@ -4,7 +4,7 @@ function initNavbar() {
 
     if (!navbar) return;
 
-    const navLinks = document.querySelectorAll(".nav-link");
+    const scrollLinks = document.querySelectorAll("[data-target]");
     const sections = document.querySelectorAll("section[id]");
 
     // Fondo al hacer scroll
@@ -18,31 +18,37 @@ function initNavbar() {
     });
 
     // Click en el menú
-    navLinks.forEach(link => {
+    scrollLinks.forEach(link => {
 
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
             const target = document.getElementById(this.dataset.target);
 
             if (!target) return;
 
             const navbarHeight = navbar.offsetHeight;
 
-            // Cambiar el activo inmediatamente
-            navLinks.forEach(l => l.classList.remove("active"));
-            this.classList.add("active");
+            // Solo actualizar el active si es un elemento del menú
+            if (this.classList.contains("nav-link")) {
+                scrollLinks.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            }
 
-            // Scroll suave
             window.scrollTo({
                 top: target.offsetTop - navbarHeight - 20,
                 behavior: "smooth"
             });
 
-            // Cerrar menú en móvil
             const collapse = document.querySelector("#navbarMenu");
+
             if (collapse && collapse.classList.contains("show")) {
                 bootstrap.Collapse.getOrCreateInstance(collapse).hide();
             }
+
         });
+
     });
 
     // Detectar sección visible
@@ -61,7 +67,7 @@ function initNavbar() {
             }
         });
 
-        navLinks.forEach(link => {
+        scrollLinks.forEach(link => {
             link.classList.toggle(
                 "active",
                 link.dataset.target === currentSection
