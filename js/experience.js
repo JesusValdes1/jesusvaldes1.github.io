@@ -1,5 +1,5 @@
 function initExperience() {
 
-    console.log("Experience cargado");
+    //console.log("Experience cargado");
 
 }

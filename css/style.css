@@ -49,3 +49,7 @@ body {
 .animate {
     opacity: 0;
 }
+
+.stagger>* {
+    opacity: 0;
+}

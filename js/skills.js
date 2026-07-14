@@ -1,5 +1,5 @@
 function initSkills() {
 
-    console.log("Skills cargado");
+    //console.log("Skills cargado");
 
 }

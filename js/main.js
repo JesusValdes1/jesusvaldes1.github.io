@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     initProjects();
     initContact();
 
-    console.log("Portafolio iniciado.");
+    //console.log("Portafolio iniciado.");
 
 });

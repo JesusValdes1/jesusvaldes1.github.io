@@ -1,5 +1,5 @@
 function initHome() {
 
-    console.log("Home cargado");
+    //console.log("Home cargado");
 
 }

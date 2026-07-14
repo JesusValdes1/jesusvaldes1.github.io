@@ -1,5 +1,5 @@
 function initProjects() {
 
-    console.log("Projects cargado");
+    //console.log("Projects cargado");
 
 }

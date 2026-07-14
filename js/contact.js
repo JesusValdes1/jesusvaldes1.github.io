@@ -1,5 +1,5 @@
 function initContact() {
 
-    console.log("Contact cargado");
+    //console.log("Contact cargado");
 
 }
