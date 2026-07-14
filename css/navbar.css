@@ -36,6 +36,7 @@
     font-weight: 600;
     padding: .75rem 1rem !important;
     transition: .3s;
+    cursor: pointer;
 }
 
 .nav-link:hover {
