@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     initProjects();
     initContact();
 
+    updateLanguageButton();
+
+    document
+        .getElementById("languageBtn")
+        .addEventListener("click", toggleLanguage);
+
     //console.log("Portafolio iniciado.");
 
 });
