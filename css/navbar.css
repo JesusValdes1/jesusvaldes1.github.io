@@ -11,6 +11,8 @@
     width: 55px;
     height: 55px;
     object-fit: contain;
+    transform: scale(1.75);
+    transform-origin: center;
 }
 
 .navbar-brand {
@@ -18,6 +20,7 @@
     align-items: center;
     gap: 14px;
     text-decoration: none;
+    overflow: visible;
 }
 
 .brand-name {
