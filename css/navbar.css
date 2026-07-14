@@ -69,35 +69,6 @@
     gap: 12px;
 }
 
-.theme-btn {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    background: var(--bg-card);
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
-}
-
-.theme-btn i {
-    font-size: 1.1rem;
-}
-
-.theme-btn:hover {
-    transform: translateY(-2px);
-    background: var(--color-primary);
-    color: #fff;
-}
-
-[data-theme="dark"] .theme-btn {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
-}
-
 .language-btn {
     display: flex;
     align-items: center;
