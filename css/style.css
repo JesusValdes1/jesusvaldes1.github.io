@@ -46,6 +46,11 @@ body {
     color: var(--text-primary);
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 .animate {
     opacity: 0;
 }
