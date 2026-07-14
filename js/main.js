@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     document
         .getElementById("languageBtn")
         .addEventListener("click", toggleLanguage);
+    
+    applyTheme();
+
+    document
+        .getElementById("themeBtn")
+        .addEventListener("click", toggleTheme);
 
     //console.log("Portafolio iniciado.");
 

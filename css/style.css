@@ -8,27 +8,84 @@
 @import url("animations.css?v=1.00");
 
 :root {
+    /* Colores principales */
     --color-primary: #2563EB;
     --color-secondary: #06B6D4;
+
+    /* Fondos */
     --bg-body: #F8FAFC;
     --bg-section: #FFFFFF;
     --bg-card: rgba(255, 255, 255, .85);
+
+    /* Texto */
     --text-primary: #0F172A;
     --text-secondary: #475569;
     --text-muted: #64748B;
+
+    /* Bordes */
     --border-color: rgba(15, 23, 42, .08);
-    --shadow-sm:
-        0 10px 30px rgba(15, 23, 42, .08);
-    --shadow-md:
-        0 20px 50px rgba(15, 23, 42, .12);
-    --shadow-lg:
-        0 35px 80px rgba(15, 23, 42, .18);
+
+    /* Sombras */
+    --shadow-sm: 0 10px 30px rgba(15, 23, 42, .08);
+    --shadow-md: 0 20px 50px rgba(15, 23, 42, .12);
+    --shadow-lg: 0 35px 80px rgba(15, 23, 42, .18);
+
+    /* Extras */
     --radius-sm: 10px;
     --radius-md: 18px;
     --radius-lg: 28px;
+
     --section-padding: 120px;
     --container-width: 1320px;
     --transition: .35s ease;
+
+    /* NAVBAR */
+    --navbar-bg: rgba(255, 255, 255, .90);
+    --navbar-border: rgba(0, 0, 0, .05);
+    --navbar-text: #111827;
+    --navbar-text-secondary: #374151;
+    --navbar-button-bg: #f8fafc;
+    --navbar-button-hover: #e2e8f0;
+    --navbar-button-text: #334155;
+    --mobile-menu-bg: #ffffff;
+    --mobile-menu-border: #ececec;
+}
+
+/* ========== TEMA OSCURO ========== */
+[data-theme="dark"] {
+    /* Colores principales */
+    --color-primary: #3B82F6;
+    --color-secondary: #22D3EE;
+
+    /* Fondos */
+    --bg-body: #0F172A;
+    --bg-section: #111827;
+    --bg-card: rgba(30, 41, 59, .88);
+
+    /* Texto */
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    /* Bordes */
+    --border-color: rgba(255, 255, 255, .08);
+
+    /* Sombras */
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, .30);
+    --shadow-md: 0 20px 50px rgba(0, 0, 0, .45);
+    --shadow-lg: 0 35px 80px rgba(0, 0, 0, .60);
+
+    /* NAVBAR */
+    --navbar-bg: rgba(15, 23, 42, .90);
+    --navbar-border: rgba(255, 255, 255, .08);
+    --navbar-text: #F8FAFC;
+    --navbar-text-secondary: #CBD5E1;
+    --navbar-button-bg: #1E293B;
+    --navbar-button-hover: #334155;
+    --navbar-button-text: #F8FAFC;
+    --mobile-menu-bg: #111827;
+    --mobile-menu-border: rgba(255, 255, 255, .08);
+
 }
 
 * {
@@ -39,16 +96,16 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background: var(--bg-body);
     color: var(--text-primary);
-}
-
-html,
-body {
     overflow-x: hidden;
+    transition:
+        background .35s ease,
+        color .35s ease;
 }
 
 section {
